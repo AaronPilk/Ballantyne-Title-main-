@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /order-title.html
+
+Sitemap: https://ballantynetitle.com/sitemap.xml
