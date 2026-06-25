@@ -53,14 +53,14 @@
 
   <header class="site-header">
     <div class="container site-header__inner">
-      <a href="index.html" class="site-header__brand" aria-label="Ballantyne Title Company — Home">Ballantyne Title Company</a>
+      <a href="index.html" class="site-header__brand" aria-label="Ballantyne Title Company — Home"><img src="assets/bt-logo.png" alt="Ballantyne Title Company" class="site-header__logo" width="80" height="80"></a>
       <nav class="nav" aria-label="Primary">
         <ul class="nav__list">
           <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
           <li><a class="nav__link" href="services.html">Services</a></li>
           <li><a class="nav__link" href="home-owners.html">Home Owners</a></li>
           <li><a class="nav__link" href="contact.html">Contact</a></li>
-          <li><a class="nav__link" href="joint-venture.html">Joint Venture</a></li>
+          <li><a class="nav__link" href="https://www.jointventuretitleinsurance.com/" target="_blank" rel="noopener noreferrer">Joint Venture</a></li>
           <li class="nav__cta"><a class="btn btn--primary" href="order-title.html">Order Title</a></li>
         </ul>
       </nav>
@@ -71,7 +71,7 @@
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false" aria-hidden="true">
       <div class="container">
         <div class="mobile-menu__head">
-          <a href="index.html" class="site-header__brand">Ballantyne Title Company</a>
+          <a href="index.html" class="site-header__brand"><img src="assets/bt-logo.png" alt="Ballantyne Title Company" class="site-header__logo" width="64" height="64"></a>
           <button class="mobile-menu__close" aria-label="Close menu" data-nav-close>×</button>
         </div>
         <ul class="mobile-menu__list">
@@ -79,7 +79,7 @@
           <li><a class="mobile-menu__link" href="services.html">Services</a></li>
           <li><a class="mobile-menu__link" href="home-owners.html">Home Owners</a></li>
           <li><a class="mobile-menu__link" href="contact.html">Contact</a></li>
-          <li><a class="mobile-menu__link" href="joint-venture.html">Joint Venture</a></li>
+          <li><a class="mobile-menu__link" href="https://www.jointventuretitleinsurance.com/" target="_blank" rel="noopener noreferrer">Joint Venture</a></li>
         </ul>
         <a class="btn btn--primary btn--block mobile-menu__cta" href="order-title.html">Order Title</a>
         <div class="mobile-menu__contact">
@@ -93,43 +93,22 @@
 
   <main>
 
-    <!-- Hero — full-bleed aerial image with pan-in/out animation, no overlay text -->
-    <section class="hero hero--image hero--bare" aria-label="Aerial view of Ballantyne, Charlotte NC">
+    <!-- Hero — full-bleed aerial image with centered overlay headline + CTAs -->
+    <section class="hero hero--image hero--centered" aria-labelledby="home-h1">
       <div class="hero__media">
         <img src="assets/ballantyne-aerial.jpg" alt="Aerial view of Ballantyne, Charlotte NC" width="1800" height="1013" class="hero__kenburns">
       </div>
-    </section>
-
-    <!-- Welcome + Joint Venture cards (moved below hero per request) -->
-    <section class="section">
-      <div class="container">
-        <div class="hero__overlay hero__overlay--inline">
-
-          <article class="hero-card">
-            <p class="eyebrow">Welcome to Ballantyne Title</p>
-            <h1 id="home-h1" style="color:#fff; font-size: clamp(1.6rem, 2.4vw + 1rem, 2.4rem); margin-bottom:14px;">Experts in residential and commercial title insurance.</h1>
-            <p>Providing full-service title insurance and closing services in North and South Carolina since <strong>2005</strong>.</p>
-            <p style="margin-bottom:24px;"><strong style="color:#fff;">Looking for title insurance and closing services?</strong></p>
-            <div class="btn-row">
-              <a class="btn btn--white" href="mailto:orders@ballantynetitle.com?subject=Title Insurance and Closing Services Inquiry">Contact us</a>
-              <a class="btn btn--ghost" href="order-title.html" style="color:#fff; border-color: rgba(255,255,255,0.4);">Order title</a>
-            </div>
-          </article>
-
-          <article class="hero-card hero-card--soft">
-            <p class="eyebrow">Joint Venture</p>
-            <h2 style="color:#fff; font-size: clamp(1.5rem, 2vw + 0.8rem, 2.1rem); margin-bottom: 14px;">Start your own title insurance company.</h2>
-            <p>We offer a turn-key business opportunity to build your own title company.</p>
-            <ul style="margin-bottom: 24px;">
-              <li>Build a <mark class="highlight">compliant</mark> revenue stream</li>
-              <li>Experience a turn-key venture</li>
-              <li>Trust your business is managed by experts</li>
-            </ul>
-            <div class="btn-row">
-              <a class="btn btn--accent" href="mailto:jointventure@ballantyne-title.com?subject=Joint Venture Inquiry">Learn more</a>
-            </div>
-          </article>
-
+      <div class="hero__center">
+        <p class="hero__eyebrow">Title Insurance &amp; Closing Services in the Carolinas</p>
+        <h1 id="home-h1" class="hero__display">
+          Title,<br>
+          <span class="hero__display-accent">Done With</span><br>
+          <span class="hero__display-accent">Confidence.</span>
+        </h1>
+        <p class="hero__lead">Full-service residential and commercial title insurance for North and South Carolina &mdash; with fast turn-times and an accessible team you can reach nights and weekends. Since 2005.</p>
+        <div class="btn-row hero__cta-row">
+          <a class="btn btn--white" href="order-title.html">Order Title</a>
+          <a class="btn btn--accent" href="contact.html">Speak With Our Team</a>
         </div>
       </div>
     </section>
@@ -305,7 +284,7 @@
           <h2>Did you know you can own your own title company?</h2>
           <p style="max-width: 60ch; margin: 0 auto 24px;">It's fully legal under RESPA Safe Harbor 8(c)(4) — and we've used the right structure to launch dozens of title companies. Most people don't believe us until we show them how. Book a 15-minute call and find out.</p>
           <div class="btn-row">
-            <a class="btn btn--accent" href="joint-venture.html">See how it works</a>
+            <a class="btn btn--accent" href="https://www.jointventuretitleinsurance.com/" target="_blank" rel="noopener noreferrer">See how it works</a>
             <a class="btn btn--white" href="contact.html#book">Schedule a call</a>
           </div>
         </div>
@@ -343,7 +322,7 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="home-owners.html">Home Owners</a></li>
             <li><a href="order-title.html">Order Title</a></li>
-            <li><a href="joint-venture.html">Joint Venture</a></li>
+            <li><a href="https://www.jointventuretitleinsurance.com/" target="_blank" rel="noopener noreferrer">Joint Venture</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
