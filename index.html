@@ -53,16 +53,14 @@
 
   <header class="site-header">
     <div class="container site-header__inner">
-      <a href="index.html" class="site-header__brand" aria-label="Ballantyne Title — Home">
-        <img src="assets/logo.svg" alt="Ballantyne Title Company" class="site-header__logo" width="200" height="52">
-      </a>
+      <a href="index.html" class="site-header__brand" aria-label="Ballantyne Title Company — Home">Ballantyne Title Company</a>
       <nav class="nav" aria-label="Primary">
         <ul class="nav__list">
           <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
           <li><a class="nav__link" href="services.html">Services</a></li>
           <li><a class="nav__link" href="home-owners.html">Home Owners</a></li>
-          <li><a class="nav__link" href="joint-venture.html">Joint Venture</a></li>
           <li><a class="nav__link" href="contact.html">Contact</a></li>
+          <li><a class="nav__link" href="joint-venture.html">Joint Venture</a></li>
           <li class="nav__cta"><a class="btn btn--primary" href="order-title.html">Order Title</a></li>
         </ul>
       </nav>
@@ -73,17 +71,15 @@
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false" aria-hidden="true">
       <div class="container">
         <div class="mobile-menu__head">
-          <a href="index.html" class="site-header__brand">
-            <img src="assets/logo.svg" alt="Ballantyne Title Company" class="site-header__logo" width="180" height="48">
-          </a>
+          <a href="index.html" class="site-header__brand">Ballantyne Title Company</a>
           <button class="mobile-menu__close" aria-label="Close menu" data-nav-close>×</button>
         </div>
         <ul class="mobile-menu__list">
           <li><a class="mobile-menu__link" href="index.html" aria-current="page">Home</a></li>
           <li><a class="mobile-menu__link" href="services.html">Services</a></li>
           <li><a class="mobile-menu__link" href="home-owners.html">Home Owners</a></li>
-          <li><a class="mobile-menu__link" href="joint-venture.html">Joint Venture</a></li>
           <li><a class="mobile-menu__link" href="contact.html">Contact</a></li>
+          <li><a class="mobile-menu__link" href="joint-venture.html">Joint Venture</a></li>
         </ul>
         <a class="btn btn--primary btn--block mobile-menu__cta" href="order-title.html">Order Title</a>
         <div class="mobile-menu__contact">
@@ -97,18 +93,17 @@
 
   <main>
 
-    <!-- Hero — full-bleed video with two overlay cards -->
-    <section class="hero hero--image" aria-labelledby="home-h1">
+    <!-- Hero — full-bleed aerial image with pan-in/out animation, no overlay text -->
+    <section class="hero hero--image hero--bare" aria-label="Aerial view of Ballantyne, Charlotte NC">
       <div class="hero__media">
-        <video autoplay muted loop playsinline preload="auto"
-               poster="https://images.unsplash.com/photo-1562762583-9e1705bcb3ff?auto=format&fit=crop&w=1800&q=80"
-               style="width:100%; height:100%; object-fit: cover; object-position: center; display:block; background:#00305B;">
-          <source src="assets/home-hero.mp4" type="video/mp4">
-          <img src="https://images.unsplash.com/photo-1562762583-9e1705bcb3ff?auto=format&fit=crop&w=1800&q=80" alt="Aerial view of Charlotte, NC skyline at night" width="1800" height="1013" style="width:100%; height:100%; object-fit: cover; object-position: center; display:block;">
-        </video>
+        <img src="assets/ballantyne-aerial.jpg" alt="Aerial view of Ballantyne, Charlotte NC" width="1800" height="1013" class="hero__kenburns">
       </div>
+    </section>
+
+    <!-- Welcome + Joint Venture cards (moved below hero per request) -->
+    <section class="section">
       <div class="container">
-        <div class="hero__overlay">
+        <div class="hero__overlay hero__overlay--inline">
 
           <article class="hero-card">
             <p class="eyebrow">Welcome to Ballantyne Title</p>
@@ -116,7 +111,7 @@
             <p>Providing full-service title insurance and closing services in North and South Carolina since <strong>2005</strong>.</p>
             <p style="margin-bottom:24px;"><strong style="color:#fff;">Looking for title insurance and closing services?</strong></p>
             <div class="btn-row">
-              <a class="btn btn--white" href="mailto:info@ballantynetitle.com?subject=Title Insurance and Closing Services Inquiry">Contact us</a>
+              <a class="btn btn--white" href="mailto:orders@ballantynetitle.com?subject=Title Insurance and Closing Services Inquiry">Contact us</a>
               <a class="btn btn--ghost" href="order-title.html" style="color:#fff; border-color: rgba(255,255,255,0.4);">Order title</a>
             </div>
           </article>
@@ -126,12 +121,12 @@
             <h2 style="color:#fff; font-size: clamp(1.5rem, 2vw + 0.8rem, 2.1rem); margin-bottom: 14px;">Start your own title insurance company.</h2>
             <p>We offer a turn-key business opportunity to build your own title company.</p>
             <ul style="margin-bottom: 24px;">
-              <li>Build a compliant revenue stream</li>
+              <li>Build a <mark class="highlight">compliant</mark> revenue stream</li>
               <li>Experience a turn-key venture</li>
               <li>Trust your business is managed by experts</li>
             </ul>
             <div class="btn-row">
-              <a class="btn btn--accent" href="joint-venture.html">Learn more</a>
+              <a class="btn btn--accent" href="mailto:jointventure@ballantyne-title.com?subject=Joint Venture Inquiry">Learn more</a>
             </div>
           </article>
 
@@ -148,7 +143,7 @@
             <p class="eyebrow">About</p>
             <h2>Ballantyne Title Company</h2>
             <figure style="margin: 0 0 24px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-              <img src="https://images.unsplash.com/photo-1507810670121-b08efd787765?auto=format&fit=crop&w=1800&q=80" alt="Bird's-eye view of Charlotte, NC at sunset" width="1200" height="720" loading="lazy" style="width:100%; aspect-ratio: 5/3; object-fit: cover; object-position: center; display:block;">
+              <img src="assets/charlotte.webp" alt="Charlotte, NC skyline reflected over Marshall Park in fall" width="1200" height="720" loading="lazy" style="width:100%; aspect-ratio: 5/3; object-fit: cover; object-position: center; display:block;">
               <figcaption style="font-size: 0.82rem; color: var(--brand-muted); padding-top: 8px;">Headquartered in Charlotte, NC.</figcaption>
             </figure>
             <p>Ballantyne Title was built on excellent customer service, impressive turn times, and extensive knowledge of the industry. Headquartered in Charlotte, NC, we service North Carolina and South Carolina from the mountains to the coast.</p>
@@ -169,7 +164,7 @@
               <li>Able to resolve complex title issues</li>
             </ul>
             <figure style="margin: 24px 0 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-              <img src="https://images.unsplash.com/photo-1562762394-3acfba62a48e?auto=format&fit=crop&w=1800&q=80" alt="Uptown Charlotte, NC at night" width="1200" height="720" loading="lazy" style="width:100%; aspect-ratio: 5/3; object-fit: cover; object-position: center; display:block;">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80" alt="Luxury home exterior" width="1200" height="720" loading="lazy" style="width:100%; aspect-ratio: 5/3; object-fit: cover; object-position: center; display:block;">
             </figure>
           </div>
         </div>
@@ -272,7 +267,7 @@
             Rate Calculator
           </a>
 
-          <a class="service-tile" href="mailto:info@ballantynetitle.com?subject=Previous Title Policy Search">
+          <a class="service-tile" href="mailto:orders@ballantynetitle.com?subject=Previous Title Policy Search">
             <svg viewBox="0 0 64 64" aria-hidden="true">
               <rect x="16" y="10" width="28" height="40" rx="2"/>
               <path d="M22 20 H38 M22 28 H38 M22 36 H32"/>
@@ -319,7 +314,7 @@
 
     <!-- Order Title CTA strip -->
     <section class="cta-strip" aria-label="Ready to order title">
-      <img class="cta-strip__bg" src="https://images.unsplash.com/photo-1562762583-9e1705bcb3ff?auto=format&fit=crop&w=1800&q=80" alt="" aria-hidden="true" loading="lazy" width="1800" height="600" style="object-position: center 60%;">
+      <img class="cta-strip__bg" src="assets/charlotte.webp" alt="" aria-hidden="true" loading="lazy" width="1800" height="600" style="object-position: center 50%;">
       <div class="cta-strip__inner">
         <h2 class="cta-strip__title">Let's go.</h2>
         <p class="lead" style="margin: 0 auto 24px; color: var(--brand-primary);">Submit a new title order in under two minutes.</p>
