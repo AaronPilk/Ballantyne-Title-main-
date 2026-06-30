@@ -1667,3 +1667,225 @@ video.video-frame,
 @media (max-width: 479px) {
   .bt-hero__cta .btn { width: 100%; }
 }
+
+/* =========================================================================
+   PREMIUM LAYER — motion, depth & confident polish.
+   Additive only. Built on the brand tokens above. Navy + sky only.
+   ========================================================================= */
+
+/* ---------- Scroll-reveal motion ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible { opacity: 1; transform: none; }
+[data-reveal-delay="1"] { transition-delay: .08s; }
+[data-reveal-delay="2"] { transition-delay: .16s; }
+[data-reveal-delay="3"] { transition-delay: .24s; }
+[data-reveal-delay="4"] { transition-delay: .32s; }
+[data-reveal-delay="5"] { transition-delay: .40s; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* ---------- Header scroll state ---------- */
+.site-header {
+  transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.site-header.is-scrolled {
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 24px rgba(0,48,91,.10);
+  border-bottom-color: transparent;
+}
+.site-header.is-scrolled .site-header__inner { height: calc(var(--header-h) - 8px); }
+.site-header__inner { transition: height .25s ease; }
+
+/* ---------- Refined buttons (more depth, subtle shine) ---------- */
+.btn--primary {
+  background: linear-gradient(180deg, #0a3f72 0%, var(--brand-primary) 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 8px 20px rgba(0,48,91,.18);
+}
+.btn--primary:hover {
+  background: linear-gradient(180deg, #0a3f72 0%, var(--brand-primary-700) 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,.10) inset, 0 12px 28px rgba(0,48,91,.26);
+  transform: translateY(-2px);
+}
+.btn--accent {
+  box-shadow: 0 8px 20px rgba(47,109,176,.22);
+}
+.btn--accent:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(47,109,176,.30); }
+.btn--white { box-shadow: 0 8px 24px rgba(0,0,0,.16); }
+.btn--white:hover { transform: translateY(-2px); }
+
+/* ---------- Cards: lift + accent top edge on hover ---------- */
+.card { position: relative; overflow: hidden; }
+.card::before {
+  content: "";
+  position: absolute; left: 0; top: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s cubic-bezier(.16,1,.3,1);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.card:hover::before { transform: scaleX(1); }
+.card__icon { transition: background .2s ease, color .2s ease, transform .2s ease; }
+.card:hover .card__icon { background: var(--brand-primary); color: #fff; transform: scale(1.04); }
+
+/* ---------- Service tiles: sheen + icon lift ---------- */
+.service-tile { position: relative; overflow: hidden; }
+.service-tile svg { transition: transform .25s cubic-bezier(.16,1,.3,1); }
+.service-tile:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,.22); }
+.service-tile:hover svg { transform: translateY(-3px) scale(1.06); }
+
+/* ---------- Underwriter strip ---------- */
+.underwriters { box-shadow: var(--shadow-md); }
+.underwriters img { transition: filter .2s ease, opacity .2s ease, transform .2s ease; }
+.underwriters img:hover { transform: translateY(-2px); }
+
+/* =========================================================================
+   HOME HERO — cinematic background video
+   ========================================================================= */
+.bt-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.bt-hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(0,24,52,.42) 0%, rgba(0,24,52,.30) 45%, rgba(0,24,52,.74) 100%),
+    radial-gradient(120% 90% at 50% 8%, rgba(0,0,0,0) 40%, rgba(0,20,45,.45) 100%);
+}
+.bt-hero--video .bt-hero__inner { z-index: 2; }
+.bt-hero--video {
+  background-image: linear-gradient(180deg, rgba(0,33,69,.30), rgba(0,33,69,.55)), url("assets/ballantyne-aerial.jpg");
+}
+
+/* Animated hero entrance */
+.bt-hero__inner > * { opacity: 0; transform: translateY(18px); animation: heroRise .9s cubic-bezier(.16,1,.3,1) forwards; }
+.bt-hero__eyebrow { animation-delay: .10s; }
+.bt-hero__display { animation-delay: .20s; }
+.bt-hero__lead    { animation-delay: .34s; }
+.bt-hero__cta     { animation-delay: .48s; }
+.bt-hero__stats   { animation-delay: .60s; }
+@keyframes heroRise { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .bt-hero__inner > * { opacity: 1; transform: none; animation: none; }
+}
+
+/* Trust stats under hero CTAs */
+.bt-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 0;
+  margin-top: 40px;
+}
+.bt-hero__stat { padding: 0 22px; text-align: center; color: #fff; }
+.bt-hero__stat + .bt-hero__stat { border-left: 1px solid rgba(255,255,255,.22); }
+.bt-hero__stat b {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.7rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.bt-hero__stat span {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.82);
+  margin-top: 4px;
+}
+@media (max-width: 560px) {
+  .bt-hero__stats { gap: 16px 0; }
+  .bt-hero__stat { flex: 1 0 33%; padding: 0 8px; }
+  .bt-hero__stat + .bt-hero__stat { border-left: 1px solid rgba(255,255,255,.18); }
+}
+
+/* Scroll cue */
+.bt-hero__cue {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255,255,255,.6);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  padding-top: 7px;
+}
+.bt-hero__cue::before {
+  content: "";
+  width: 4px;
+  height: 8px;
+  border-radius: 2px;
+  background: #fff;
+  animation: cueDrop 1.8s ease-in-out infinite;
+}
+@keyframes cueDrop {
+  0%, 100% { opacity: 0; transform: translateY(0); }
+  30%      { opacity: 1; }
+  70%      { opacity: 1; transform: translateY(10px); }
+}
+@media (prefers-reduced-motion: reduce) { .bt-hero__cue::before { animation: none; } }
+@media (max-width: 560px) { .bt-hero__cue { display: none; } }
+
+/* =========================================================================
+   STAT / CREDIBILITY BAND
+   ========================================================================= */
+.stat-band { background: var(--brand-bg-tint); border-block: 1px solid var(--brand-border); }
+.stat-band__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 16px;
+  padding-block: 44px;
+}
+@media (min-width: 768px) { .stat-band__grid { grid-template-columns: repeat(4, 1fr); padding-block: 56px; } }
+.stat { text-align: center; }
+.stat b {
+  display: block;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--brand-primary);
+  font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.stat span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-muted);
+}
+
+/* ---------- Interior page hero polish ---------- */
+.hero { position: relative; overflow: hidden; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 70% at 78% 0%, rgba(47,109,176,.10) 0%, rgba(47,109,176,0) 60%),
+    radial-gradient(55% 60% at 8% 100%, rgba(181,207,230,.22) 0%, rgba(181,207,230,0) 60%);
+  pointer-events: none;
+}
+.hero .container { position: relative; z-index: 1; }

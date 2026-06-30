@@ -114,7 +114,7 @@
     <!-- Contact tiles -->
     <section class="section section--soft">
       <div class="container">
-        <div class="contact-tiles">
+        <div class="contact-tiles" data-reveal>
           <div class="contact-tile">
             <p class="contact-tile__label">Phone — Call us today</p>
             <p class="contact-tile__value"><a href="tel:+17044673031">704-467-3031</a></p>
@@ -152,7 +152,7 @@
     <!-- Contact form + book a JV call -->
     <section class="section" id="book">
       <div class="container">
-        <div class="split split--lead">
+        <div class="split split--lead" data-reveal>
           <div>
             <p class="eyebrow">Send us a note</p>
             <h2>How can we help?</h2>
@@ -160,7 +160,7 @@
             <p class="muted" style="font-size: 0.9rem;">Prefer a quick call? Dial <a href="tel:+17044673031">704-467-3031</a> during business hours, or our after-hours line at <a href="tel:+17043709515">704-370-9515</a>.</p>
           </div>
 
-          <div class="form-card">
+          <div class="form-card" data-reveal>
             <p class="form-note">
               <strong>For developers:</strong> this form falls back to a <code>mailto:</code> submission. Wire it to your backend handler when ready. Submissions email <a href="mailto:orders@ballantynetitle.com">orders@ballantynetitle.com</a>.
             </p>
@@ -208,7 +208,7 @@
     <!-- Address band -->
     <section class="address-band">
       <div class="container">
-        <div class="address-band__grid">
+        <div class="address-band__grid" data-reveal>
           <div class="address-tile">
             <h3>Office &mdash; Oakboro</h3>
             <address>
@@ -236,7 +236,7 @@
 
     <!-- Order Title CTA strip -->
     <section class="cta-strip" aria-label="Ready to order title">
-      <img class="cta-strip__bg" src="https://images.unsplash.com/photo-1562762583-9e1705bcb3ff?auto=format&fit=crop&w=1800&q=80" alt="" aria-hidden="true" loading="lazy" width="1800" height="600" style="object-position: center 60%;">
+      <img class="cta-strip__bg" src="assets/charlotte.webp" alt="" aria-hidden="true" loading="lazy" width="1800" height="600" style="object-position: center 60%;">
       <div class="cta-strip__inner">
         <h2 class="cta-strip__title">Let's go.</h2>
         <p class="lead" style="margin: 0 auto 24px; color: var(--brand-primary);">Submit a new title order in under two minutes.</p>
@@ -293,20 +293,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var btn = document.querySelector('[data-nav-toggle]');
-      var menu = document.querySelector('[data-mobile-menu]');
-      var close = document.querySelector('[data-nav-close]');
-      if (!btn || !menu) return;
-      function open()  { menu.dataset.open = 'true';  menu.setAttribute('aria-hidden','false'); btn.setAttribute('aria-expanded','true');  document.body.style.overflow = 'hidden'; }
-      function shut()  { menu.dataset.open = 'false'; menu.setAttribute('aria-hidden','true');  btn.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; }
-      btn.addEventListener('click', open);
-      if (close) close.addEventListener('click', shut);
-      menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', shut); });
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') shut(); });
-    })();
-    (function(){ var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear(); })();
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>

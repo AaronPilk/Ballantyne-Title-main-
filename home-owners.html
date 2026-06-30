@@ -133,7 +133,7 @@
 
     <!-- Buyers + Sellers dual-card hero -->
     <section class="dual-card-hero" aria-labelledby="ho-h1">
-      <img class="dual-card-hero__media" src="https://images.unsplash.com/photo-1507810670121-b08efd787765?auto=format&fit=crop&w=1800&q=80" alt="Charlotte, NC at sunset — the city we serve home buyers and sellers across" width="1800" height="1200" loading="eager" fetchpriority="high" style="object-position: center 60%;">
+      <img class="dual-card-hero__media" src="assets/charlotte.webp" alt="Charlotte, NC at sunset — the city we serve home buyers and sellers across" width="1800" height="1200" loading="eager" fetchpriority="high" style="object-position: center 60%;">
       <div class="container">
         <h1 id="ho-h1" class="sr-only">Title Insurance for Home Buyers and Sellers</h1>
         <div class="dual-card-hero__grid">
@@ -169,13 +169,13 @@
     <!-- Educational accordion -->
     <section class="section section--soft" id="learn">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <p class="eyebrow">Title insurance, explained</p>
           <h2>What every home buyer should know.</h2>
           <p class="lead" style="margin-inline: auto;">Tap a question to expand. We've kept these answers short and plain.</p>
         </div>
 
-        <div class="accordion">
+        <div class="accordion" data-reveal>
           <details>
             <summary>What is title insurance and why do I need it?</summary>
             <div class="accordion__body">
@@ -251,7 +251,7 @@
 
     <!-- Order Title CTA strip -->
     <section class="cta-strip" aria-label="Ready to order title">
-      <img class="cta-strip__bg" src="https://images.unsplash.com/photo-1562762583-9e1705bcb3ff?auto=format&fit=crop&w=1800&q=80" alt="" aria-hidden="true" loading="lazy" width="1800" height="600" style="object-position: center 60%;">
+      <img class="cta-strip__bg" src="assets/charlotte.webp" alt="" aria-hidden="true" loading="lazy" width="1800" height="600" style="object-position: center 60%;">
       <div class="cta-strip__inner">
         <h2 class="cta-strip__title">Let's go.</h2>
         <p class="lead" style="margin: 0 auto 24px; color: var(--brand-primary);">Submit a new title order in under two minutes.</p>
@@ -308,20 +308,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var btn = document.querySelector('[data-nav-toggle]');
-      var menu = document.querySelector('[data-mobile-menu]');
-      var close = document.querySelector('[data-nav-close]');
-      if (!btn || !menu) return;
-      function open()  { menu.dataset.open = 'true';  menu.setAttribute('aria-hidden','false'); btn.setAttribute('aria-expanded','true');  document.body.style.overflow = 'hidden'; }
-      function shut()  { menu.dataset.open = 'false'; menu.setAttribute('aria-hidden','true');  btn.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; }
-      btn.addEventListener('click', open);
-      if (close) close.addEventListener('click', shut);
-      menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', shut); });
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') shut(); });
-    })();
-    (function(){ var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear(); })();
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>
