@@ -93,30 +93,26 @@
 
   <main>
 
-    <!-- Hero — cinematic background video with centered overlay -->
-    <section class="bt-hero bt-hero--video" aria-labelledby="home-h1">
-      <video class="bt-hero__video" autoplay muted loop playsinline preload="auto" poster="assets/ballantyne-aerial.jpg" aria-hidden="true">
-        <source src="assets/home-hero.mp4" type="video/mp4">
-      </video>
-      <div class="bt-hero__scrim" aria-hidden="true"></div>
-      <div class="bt-hero__inner">
-        <p class="bt-hero__eyebrow">Title Insurance &amp; Closing Services in the Carolinas</p>
-        <h1 id="home-h1" class="bt-hero__display">
-          Title,<br>
-          <span class="bt-hero__accent">Done With Confidence.</span>
-        </h1>
-        <p class="bt-hero__lead">Full-service residential and commercial title insurance for North and South Carolina &mdash; fast turn-times and a team you can reach nights and weekends. Since 2005.</p>
-        <div class="bt-hero__cta">
-          <a class="btn btn--white" href="order-title.html">Order Title</a>
-          <a class="btn btn--accent" href="contact.html">Speak With Our Team</a>
+    <!-- Hero — editorial split (no video) -->
+    <section class="home-hero" aria-labelledby="home-h1">
+      <div class="container home-hero__inner">
+        <div class="home-hero__content">
+          <p class="home-hero__eyebrow">Title Insurance &amp; Closing Services &middot; The Carolinas</p>
+          <h1 id="home-h1" class="home-hero__title">Title, done with <span class="accent">confidence.</span></h1>
+          <p class="home-hero__lead">Full-service residential and commercial title insurance for North &amp; South Carolina &mdash; fast turn-times and a team you can reach nights and weekends. Trusted since 2005.</p>
+          <div class="home-hero__cta">
+            <a class="btn btn--primary" href="order-title.html">Order Title</a>
+            <a class="btn btn--ghost" href="contact.html">Speak With Our Team</a>
+          </div>
         </div>
-        <div class="bt-hero__stats" role="list">
-          <div class="bt-hero__stat" role="listitem"><b>Since&nbsp;2005</b><span>Trusted Track Record</span></div>
-          <div class="bt-hero__stat" role="listitem"><b>NC&nbsp;&amp;&nbsp;SC</b><span>Mountains to Coast</span></div>
-          <div class="bt-hero__stat" role="listitem"><b>Nights&nbsp;&amp;&nbsp;Weekends</b><span>When You Need Us</span></div>
+        <div class="home-hero__media">
+          <img src="assets/hero-home.webp" alt="Elegant modern Carolinas home at twilight with warm interior lights" width="2000" height="1116" fetchpriority="high">
+          <div class="home-hero__chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><b>Licensed in NC &amp; SC</b><span>Backed by national underwriters</span></div>
+          </div>
         </div>
       </div>
-      <span class="bt-hero__cue" aria-hidden="true"></span>
     </section>
 
     <!-- Credibility stat band -->

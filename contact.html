@@ -101,32 +101,93 @@
 
   <main>
 
-    <section class="hero">
+    <!-- Contact lead: modern split — info panel + form -->
+    <section class="section contact-lead" id="book">
       <div class="container">
-        <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-          <p class="eyebrow center">Contact</p>
-          <h1 class="hero__title">Let's talk title.</h1>
-          <p class="hero__sub" style="margin-inline: auto;">Reach the right inbox below, or use the form to send a quick message. We respond within one business day.</p>
+        <div class="contact-grid">
+          <aside class="contact-aside" data-reveal>
+            <p class="eyebrow">Contact</p>
+            <h1>Let&rsquo;s talk title.</h1>
+            <p>Working on a closing, buying a home, or curious about the joint-venture program? Send a note and we&rsquo;ll route it to the right person &mdash; we reply within one business day.</p>
+            <ul class="contact-quick">
+              <li>
+                <span>Call us today</span>
+                <a href="tel:+17044673031">704-467-3031</a>
+              </li>
+              <li>
+                <span>Nights &amp; weekends</span>
+                <a href="tel:+17043709515">704-370-9515</a>
+              </li>
+              <li>
+                <span>General inbox</span>
+                <a href="mailto:info@ballantynetitle.com">info@ballantynetitle.com</a>
+              </li>
+            </ul>
+          </aside>
+
+          <div class="form-card" data-reveal data-reveal-delay="1">
+            <h2 class="form-card__title">Send us a note</h2>
+            <form class="form" action="mailto:orders@ballantynetitle.com" method="POST" enctype="text/plain" aria-label="Contact form">
+              <div class="form-row form-row--full" style="grid-column: 1 / -1;">
+                <label for="ct-name">Name</label>
+                <input id="ct-name" name="Name" type="text" required autocomplete="name" placeholder="Your full name">
+              </div>
+              <div class="form-row">
+                <label for="ct-email">Email</label>
+                <input id="ct-email" name="Email" type="email" required autocomplete="email" placeholder="you@email.com">
+              </div>
+              <div class="form-row">
+                <label for="ct-phone">Phone number</label>
+                <input id="ct-phone" name="Phone Number" type="tel" autocomplete="tel" placeholder="(704) 000-0000">
+              </div>
+              <div class="form-row form-row--full" style="grid-column: 1 / -1;">
+                <label for="ct-topic">I&rsquo;m interested in&hellip;</label>
+                <select id="ct-topic" name="Topic">
+                  <option>A title order or closing question</option>
+                  <option>The Joint Venture program</option>
+                  <option>Home owner / buyer question</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="form-row form-row--full" style="grid-column: 1 / -1;">
+                <label for="ct-message">Message</label>
+                <textarea id="ct-message" name="Message" rows="5" required placeholder="Tell us a little about what you need&hellip;"></textarea>
+              </div>
+
+              <p class="form-disclaimer" style="grid-column: 1 / -1;">
+                By submitting this form I agree to be contacted by Ballantyne Title Company via call, email, and text. To opt out, reply &lsquo;stop&rsquo; at any time or click the unsubscribe link in our emails. Message and data rates may apply.
+              </p>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn--primary">Send message</button>
+                <span class="muted" style="font-size: 0.9rem;">Or email <a href="mailto:orders@ballantynetitle.com">orders@ballantynetitle.com</a> directly.</span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact tiles -->
+    <!-- Reach the right inbox -->
     <section class="section section--soft">
       <div class="container">
-        <div class="contact-tiles" data-reveal>
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Direct lines</p>
+          <h2>Reach the right inbox</h2>
+        </div>
+        <div class="contact-tiles" data-reveal data-reveal-delay="1">
           <div class="contact-tile">
-            <p class="contact-tile__label">Phone — Call us today</p>
+            <p class="contact-tile__label">Phone &mdash; Call us today</p>
             <p class="contact-tile__value"><a href="tel:+17044673031">704-467-3031</a></p>
-            <p class="contact-tile__sub">Main office line, Mon–Fri.</p>
+            <p class="contact-tile__sub">Main office line, Mon&ndash;Fri.</p>
           </div>
           <div class="contact-tile">
-            <p class="contact-tile__label">Phone — Office</p>
+            <p class="contact-tile__label">Phone &mdash; Office</p>
             <p class="contact-tile__value"><a href="tel:+17049927846">(704) 992-7846</a></p>
             <p class="contact-tile__sub">Headquarters phone.</p>
           </div>
           <div class="contact-tile">
-            <p class="contact-tile__label">Phone — Nights &amp; Weekends</p>
+            <p class="contact-tile__label">Phone &mdash; Nights &amp; Weekends</p>
             <p class="contact-tile__value"><a href="tel:+17043709515">704-370-9515</a></p>
             <p class="contact-tile__sub">After-hours and weekend support.</p>
           </div>
@@ -149,86 +210,21 @@
       </div>
     </section>
 
-    <!-- Contact form + book a JV call -->
-    <section class="section" id="book">
-      <div class="container">
-        <div class="split split--lead" data-reveal>
-          <div>
-            <p class="eyebrow">Send us a note</p>
-            <h2>How can we help?</h2>
-            <p>Working on a closing? Curious about the joint-venture program? Drop your details and a quick note — we'll route it to the right person and follow up within one business day.</p>
-            <p class="muted" style="font-size: 0.9rem;">Prefer a quick call? Dial <a href="tel:+17044673031">704-467-3031</a> during business hours, or our after-hours line at <a href="tel:+17043709515">704-370-9515</a>.</p>
-          </div>
-
-          <div class="form-card" data-reveal>
-            <p class="form-note">
-              <strong>For developers:</strong> this form falls back to a <code>mailto:</code> submission. Wire it to your backend handler when ready. Submissions email <a href="mailto:orders@ballantynetitle.com">orders@ballantynetitle.com</a>.
-            </p>
-            <form class="form" action="mailto:orders@ballantynetitle.com" method="POST" enctype="text/plain" aria-label="Contact form">
-              <div class="form-row form-row--full" style="grid-column: 1 / -1;">
-                <label for="ct-name">Name</label>
-                <input id="ct-name" name="Name" type="text" required autocomplete="name">
-              </div>
-              <div class="form-row">
-                <label for="ct-email">Email</label>
-                <input id="ct-email" name="Email" type="email" required autocomplete="email">
-              </div>
-              <div class="form-row">
-                <label for="ct-phone">Phone number</label>
-                <input id="ct-phone" name="Phone Number" type="tel" autocomplete="tel">
-              </div>
-              <div class="form-row form-row--full" style="grid-column: 1 / -1;">
-                <label for="ct-topic">I'm interested in…</label>
-                <select id="ct-topic" name="Topic">
-                  <option>A title order or closing question</option>
-                  <option>The Joint Venture program</option>
-                  <option>Home owner / buyer question</option>
-                  <option>Something else</option>
-                </select>
-              </div>
-              <div class="form-row form-row--full" style="grid-column: 1 / -1;">
-                <label for="ct-message">Message</label>
-                <textarea id="ct-message" name="Message" rows="5" required></textarea>
-              </div>
-
-              <p class="form-disclaimer" style="grid-column: 1 / -1;">
-                By filling out the above form I agree to be contacted by Ballantyne Title Company via call, email, and text. To opt out, you can reply 'stop' at any time or click the unsubscribe link in the emails. Message and data rates may apply.
-              </p>
-
-              <div class="form-submit-row">
-                <button type="submit" class="btn btn--primary">Submit</button>
-                <span class="muted" style="font-size: 0.9rem;">Or email <a href="mailto:orders@ballantynetitle.com">orders@ballantynetitle.com</a> directly.</span>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Address band -->
     <section class="address-band">
       <div class="container">
         <div class="address-band__grid" data-reveal>
           <div class="address-tile">
             <h3>Office &mdash; Oakboro</h3>
-            <address>
-              119 West 3rd Street<br>
-              Oakboro, NC 28129
-            </address>
+            <address>119 West 3rd Street<br>Oakboro, NC 28129</address>
           </div>
           <div class="address-tile">
             <h3>Office &mdash; Charlotte</h3>
-            <address>
-              6401 Carmel Rd. Suite 203<br>
-              Charlotte, NC 28226
-            </address>
+            <address>6401 Carmel Rd. Suite 203<br>Charlotte, NC 28226</address>
           </div>
           <div class="address-tile">
             <h3>Mailing address</h3>
-            <address>
-              PO Box 851<br>
-              Oakboro, NC 28129
-            </address>
+            <address>PO Box 851<br>Oakboro, NC 28129</address>
           </div>
         </div>
       </div>
@@ -238,8 +234,8 @@
     <section class="cta-strip" aria-label="Ready to order title">
       <img class="cta-strip__bg" src="assets/charlotte.webp" alt="" aria-hidden="true" loading="lazy" width="1800" height="600" style="object-position: center 60%;">
       <div class="cta-strip__inner">
-        <h2 class="cta-strip__title">Let's go.</h2>
-        <p class="lead" style="margin: 0 auto 24px; color: var(--brand-primary);">Submit a new title order in under two minutes.</p>
+        <h2 class="cta-strip__title">Let&rsquo;s go.</h2>
+        <p class="lead" style="margin: 0 auto 24px; color: #fff;">Submit a new title order in under two minutes.</p>
         <div class="btn-row" style="justify-content: center;">
           <a class="btn btn--primary" href="order-title.html">Order title</a>
           <a class="btn btn--ghost" href="https://www.jointventuretitleinsurance.com/" target="_blank" rel="noopener noreferrer">Joint Venture program</a>

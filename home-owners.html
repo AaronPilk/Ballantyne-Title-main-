@@ -131,36 +131,62 @@
 
   <main>
 
-    <!-- Buyers + Sellers dual-card hero -->
-    <section class="dual-card-hero" aria-labelledby="ho-h1">
-      <img class="dual-card-hero__media" src="assets/charlotte.webp" alt="Charlotte, NC at sunset — the city we serve home buyers and sellers across" width="1800" height="1200" loading="eager" fetchpriority="high" style="object-position: center 60%;">
+    <!-- Hero — editorial split -->
+    <section class="home-hero" aria-labelledby="ho-h1">
+      <div class="container home-hero__inner">
+        <div class="home-hero__content">
+          <p class="home-hero__eyebrow">For Home Owners</p>
+          <h1 id="ho-h1" class="home-hero__title">Protecting what&rsquo;s <span class="accent">yours.</span></h1>
+          <p class="home-hero__lead">Buying or selling in the Carolinas? We make sure your title is clear, your closing is smooth, and your investment is protected &mdash; for as long as you own the home.</p>
+          <div class="home-hero__cta">
+            <a class="btn btn--primary" href="order-title.html">Order title</a>
+            <a class="btn btn--ghost" href="#learn">Title insurance, explained</a>
+          </div>
+        </div>
+        <div class="home-hero__media">
+          <img src="assets/homeowners.webp" alt="Welcoming craftsman-style home with a covered front porch in the Carolinas" width="1600" height="1073" fetchpriority="high">
+          <div class="home-hero__chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><b>Paid once, protects for life</b><span>No renewals, no expiration</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buyers & Sellers -->
+    <section class="section">
       <div class="container">
-        <h1 id="ho-h1" class="sr-only">Title Insurance for Home Buyers and Sellers</h1>
-        <div class="dual-card-hero__grid">
-          <article class="dual-card">
-            <h2>Buyers</h2>
-            <p>When purchasing a home, it's essential to verify the seller's rightful ownership and ensure there are no unresolved issues that could impede the transfer of the title to you.</p>
-            <p><strong>Why is this important?</strong></p>
-            <p>Problems with the title can impose limitations on property usage and potentially lead to financial losses. This is where title insurance becomes invaluable, and Ballantyne Title Company is here to assist you. We conduct thorough title searches to confirm that your ownership is clear of any encumbrances. With a title insurance policy, your investment is safeguarded, reassuring you that your ownership remains unencumbered.</p>
-            <p>The cost of title insurance is paid only once, with no renewal premiums or expiration dates. This protection endures for as long as you, or your successors, hold an interest in the property, ensuring long-term security.</p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="order-title.html">Order title</a>
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Buyers &amp; Sellers</p>
+          <h2>However you&rsquo;re moving, we&rsquo;ve got the title side handled.</h2>
+        </div>
+        <div class="grid ho-cards">
+          <article class="card ho-card" data-reveal>
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/><path d="M10 19v-5h4v5"/></svg>
             </div>
+            <h3 class="card__title">Buying a home</h3>
+            <p class="card__body">Before you close, we confirm the seller truly owns the property and that nothing &mdash; liens, errors, or old claims &mdash; can threaten your ownership. A one-time owner&rsquo;s policy then protects your investment for as long as you, or your heirs, hold the home.</p>
+            <ul class="ho-list">
+              <li>Thorough title search for a clear, encumbrance-free title</li>
+              <li>Owner&rsquo;s policy paid once &mdash; no renewals, no expiration</li>
+              <li>Long-term protection for you and your successors</li>
+            </ul>
+            <a class="card__cta" href="order-title.html">Order title</a>
           </article>
 
-          <article class="dual-card">
-            <h2>Sellers</h2>
-            <p>Selling your house? Ballantyne Title can help. We will assist you in finding an experienced closing attorney and satisfy any liens. We promise a smooth closing, great communication, and amazing service.</p>
-            <p>Whether you are listing your house for sale by owner or working with a real-estate agent, we are here for you.</p>
-            <ul>
-              <li>Timely and accurate title commitments</li>
-              <li>Experienced and knowledgeable</li>
-              <li>Ability to resolve complex issues</li>
-            </ul>
-            <p>Ballantyne Title will make the closing easy. Contact us to get your transaction started.</p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="contact.html">Contact us</a>
+          <article class="card ho-card" data-reveal data-reveal-delay="1">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/><path d="M9 14h6"/><path d="M9 17h6"/></svg>
             </div>
+            <h3 class="card__title">Selling a home</h3>
+            <p class="card__body">Selling your house? We&rsquo;ll help you find an experienced closing attorney, satisfy any liens, and keep everyone moving toward a smooth close &mdash; whether you&rsquo;re for sale by owner or working with an agent.</p>
+            <ul class="ho-list">
+              <li>Timely, accurate title commitments</li>
+              <li>Experienced and knowledgeable team</li>
+              <li>Able to resolve complex title issues</li>
+            </ul>
+            <a class="card__cta" href="contact.html">Contact us</a>
           </article>
         </div>
       </div>
